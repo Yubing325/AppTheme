@@ -154,3 +154,10 @@ img {
  padding: 10px;
  border: 0;
 }
+
+/*footer*/
+
+#main-footer{
+  background: #56a79a;
+  color: #fff;
+}
