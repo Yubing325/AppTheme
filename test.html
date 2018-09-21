@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>This is a test</title>
+</head>
+
+<body>
+  <script>
+    function Validate() {
+      var txtName = document.getElementById('input_name'); //get input
+      var button = document.getElementById('btnValidate'); //get button
+      var form = document.getElementById('testForm');
+      if (txtName.value.trim() == '') {
+        var label = document.createElement('label');
+        label.setAttribute('for', 'input_name');
+        form.insertBefore(label, button);
+        txtName.labels[1].innerHTML = 'Please input your name';
+        txtName.labels[1].setAttribute('style', 'font-size:12px; color:red');
+      }
+    }
+  </script>
+  <form action="#" id="testForm">
+    <label for="input_name" id="label">Name</label>
+    <input type="text" id="input_name">
+    <input type="text" id="input_name">
+    <button id="btnValidate" value="submit" onclick="Validate()">Submit</button>
+  </form>
+
+</body>
+
+</html>
